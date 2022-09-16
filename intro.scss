@@ -14,6 +14,31 @@ body{
 .light{
     color:hsl(0, 0%, 41%);
 }
+@mixin border($col) 
+{
+    border: 1px solid $col;
+    
+}
+
+header{
+    display: flex;
+    width: 95%;
+    margin: 20px auto 0;
+    justify-content: space-between;
+    @include border(red);
+    .main_char{
+        width: 80%;
+        @include border(green);
+        display: flex;
+        justify-content: space-between;
+        .second{
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            border: 1px solid gold;
+        }
+    }
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

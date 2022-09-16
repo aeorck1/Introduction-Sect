@@ -3,4 +3,45 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0%;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+.heavy {
+  color: hsl(0deg, 0%, 8%);
+}
+
+.light {
+  color: hsl(0deg, 0%, 41%);
+}
+
+header {
+  display: flex;
+  width: 95%;
+  margin: 20px auto 0;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+header .main_char {
+  width: 80%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+}
+header .main_char .second {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  border: 1px solid gold;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
 }/*# sourceMappingURL=intro.css.map */
