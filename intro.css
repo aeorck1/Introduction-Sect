@@ -22,11 +22,13 @@ header {
   width: 95%;
   margin: 20px auto 0;
   justify-content: space-between;
-  border: 1px solid red;
+}
+header img {
+  width: 100px;
+  height: auto;
 }
 header .main_char {
-  width: 80%;
-  border: 1px solid green;
+  width: 88%;
   display: flex;
   justify-content: space-between;
 }
@@ -34,7 +36,27 @@ header .main_char .second {
   display: flex;
   width: 50%;
   justify-content: space-between;
-  border: 1px solid gold;
+}
+header .main_char .second > div {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+header .main_char .second > div:nth-child(1)::after, header .main_char .second > div:nth-child(2)::after {
+  margin-left: 5px;
+  content: url(./images/icon-arrow-down.svg);
+}
+header .main_char .right {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+header .main_char .right > div {
+  text-align: center;
+  padding: 8px 13px;
+}
+header .main_char .right .bord {
+  border: 1px solid hsl(0deg, 0%, 41%);
+  border-radius: 10px;
 }
 
 .attribution {

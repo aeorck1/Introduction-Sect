@@ -25,17 +25,44 @@ header{
     width: 95%;
     margin: 20px auto 0;
     justify-content: space-between;
-    @include border(red);
+    img{
+        width: 100px;
+        height: auto;
+    }
     .main_char{
-        width: 80%;
-        @include border(green);
+        width: 88%;
         display: flex;
         justify-content: space-between;
         .second{
             display: flex;
             width: 50%;
             justify-content: space-between;
-            border: 1px solid gold;
+            >div{
+                padding: 5px 10px;
+                cursor:pointer;
+                &:nth-child(1), &:nth-child(2){
+                    &::after{
+                        margin-left: 5px;
+                        content:  url(./images/icon-arrow-down.svg);
+                    }
+                }
+            }
+        }
+
+        .right{
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            >div{
+                    text-align: center;
+                    padding: 8px 13px;
+                
+            }
+
+            .bord{
+                border: 1px solid hsl(0, 0%, 41%);
+                border-radius: 10px;
+            }
         }
     }
 }
