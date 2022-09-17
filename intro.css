@@ -49,6 +49,7 @@ header .main_char .second .cases {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0 0.3s;
 }
 header .main_char .second .cases:nth-child(1)::after, header .main_char .second .cases:nth-child(2)::after {
   margin-left: 5px;
@@ -146,7 +147,7 @@ main .left .customers img {
   display: none;
   flex-direction: column;
   margin-bottom: -70px;
-  top: 30px;
+  top: 40px;
   margin-left: -50px;
   bottom: 0;
   height: 170px;

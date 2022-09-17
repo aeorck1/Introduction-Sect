@@ -57,11 +57,11 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                transition: set-nth($list: 1, $n: 1, $value: 0) .3s;
 
 
                 &:nth-child(1),
                 &:nth-child(2) {
-
 
                     &::after {
                         margin-left: 5px;
@@ -76,8 +76,10 @@ header {
 
                     &:nth-child(1),
                     &:nth-child(2) {
+                        
                         .sub_menu {
                             display: flex;
+                            
                         }
 
                         &::after {
@@ -186,7 +188,7 @@ main {
     display: none;
     flex-direction: column;
     margin-bottom: -70px;
-    top: 30px;
+    top: 40px;
     margin-left: -50px;
     bottom: 0;
     height: 170px;
