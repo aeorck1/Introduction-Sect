@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Othella";
+    src: url(./images/Epilogue-VariableFont_wght.ttf);
+}
+
 *{
     position: relative;
     box-sizing: border-box;
@@ -7,6 +12,8 @@
 
 body{
     background-color: hsl(0, 0, 98%);
+    font-family: "Othella";
+
 }
 .heavy{
     color: hsl(0, 0, 8%);
