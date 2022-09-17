@@ -43,22 +43,25 @@ header .main_char .second {
   width: 50%;
   justify-content: space-between;
 }
-header .main_char .second > div {
+header .main_char .second .cases {
   padding: 5px 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header .main_char .second > div:nth-child(1)::after, header .main_char .second > div:nth-child(2)::after {
+header .main_char .second .cases:nth-child(1)::after, header .main_char .second .cases:nth-child(2)::after {
   margin-left: 5px;
   margin-top: -5px;
   content: url(./images/icon-arrow-down.svg);
 }
-header .main_char .second > div:hover {
+header .main_char .second .cases:hover {
   color: hsl(0deg, 0%, 8%);
 }
-header .main_char .second > div:hover:nth-child(1)::after, header .main_char .second > div:hover:nth-child(2)::after {
+header .main_char .second .cases:hover:nth-child(1) .sub_menu, header .main_char .second .cases:hover:nth-child(2) .sub_menu {
+  display: flex;
+}
+header .main_char .second .cases:hover:nth-child(1)::after, header .main_char .second .cases:hover:nth-child(2)::after {
   content: url(./images/icon-arrow-up.svg);
 }
 header .main_char .right {
@@ -110,7 +113,6 @@ main .left .remote {
 main .left p {
   font-size: 18px;
   color: hsl(0deg, 0%, 41%);
-  border: 1px solid yellow;
   width: 450px;
   line-height: 1.5;
   font-weight: 500;
@@ -138,20 +140,35 @@ main .left .customers img {
   width: auto;
 }
 
-.sub, header .main_char .second > div:hover:nth-child(1) .sub_menu, header .main_char .second > div:hover:nth-child(2) .sub_menu {
+.sub_menu {
+  z-index: 1;
   position: absolute;
+  display: none;
+  flex-direction: column;
   margin-bottom: -70px;
+  top: 30px;
   margin-left: -50px;
   bottom: 0;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 200px;
-  padding: 20px;
+  height: 170px;
+  width: 170px;
+  align-items: center;
+  justify-content: space-around;
   border-radius: 5px;
   background-color: white;
-  display: block;
   box-shadow: 1px 1px 10px hsla(229deg, 31%, 79%, 0.664);
+  border-radius: 8px;
+  color: hsl(0deg, 0%, 41%);
+}
+.sub_menu .feat {
+  display: flex;
+  margin-left: 40px;
+  align-items: center;
+  width: 100%;
+}
+.sub_menu .feat img {
+  margin-right: 25px;
+  width: 15px;
+  height: 15px;
 }
 
 .attribution {

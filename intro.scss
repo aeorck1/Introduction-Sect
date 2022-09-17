@@ -51,17 +51,18 @@ header {
             width: 50%;
             justify-content: space-between;
 
-            >div {
+            .cases {
                 padding: 5px 10px;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                
+
 
                 &:nth-child(1),
                 &:nth-child(2) {
-                    
+
+
                     &::after {
                         margin-left: 5px;
                         margin-top: -5px;
@@ -75,19 +76,21 @@ header {
 
                     &:nth-child(1),
                     &:nth-child(2) {
+                        .sub_menu {
+                            display: flex;
+                        }
+
                         &::after {
                             content: url(./images/icon-arrow-up.svg);
                         }
-                        .sub_menu {
-                            @extend .sub;
-                            
-                        }
+
                     }
                 }
 
 
-               
+
             }
+
         }
 
         .right {
@@ -147,7 +150,6 @@ main {
         p {
             font-size: 18px;
             color: hsl(0, 0%, 41%);
-            border: 1px solid yellow;
             width: 450px;
             line-height: 1.5;
             font-weight: 500;
@@ -178,19 +180,38 @@ main {
     }
 }
 
-.sub {
+.sub_menu {
+    z-index: 1;
     position: absolute;
+    display: none;
+    flex-direction: column;
     margin-bottom: -70px;
+    top: 30px;
     margin-left: -50px;
     bottom: 0;
-    height: fit-content;
-    width: 200px;
-    padding: 20px;
+    height: 170px;
+    width: 170px;
+    align-items: center;
+    justify-content: space-around;
     border-radius: 5px;
     background-color: white;
-    display: block;
     box-shadow: 1px 1px 10px hsla(229, 31%, 79%, 0.664);
-    
+    border-radius: 8px;
+    color: hsl(0, 0%, 41%);
+
+    .feat {
+        display: flex;
+        margin-left: 40px;
+        align-items: center;
+        width: 100%;
+
+        img {
+            margin-right: 25px;
+            width: 15px;
+            height: 15px;
+        }
+    }
+
 }
 
 .attribution {
