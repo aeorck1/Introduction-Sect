@@ -96,6 +96,37 @@ main{
             margin-top: 30px;
             margin-bottom: 30px;
         }
+        p{
+            font-size: 18px;
+            color: hsl(0, 0%, 41%);
+            border: 1px solid yellow;
+            width: 450px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .learner{
+            font-weight: 500;
+            font-size: 18px;
+            color: hsl(0, 0%, 98%);
+            background-color: hsl(0, 0%, 8%);
+            padding: 15px 20px ;
+            margin-top: 50px;
+            border-radius: 10px;
+            width: fit-content;
+        }
+
+        .customers{
+            margin-top: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            img{
+
+            }
+        }
     }
 }
 .attribution { font-size: 11px; text-align: center; }
