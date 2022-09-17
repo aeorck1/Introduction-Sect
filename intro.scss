@@ -57,9 +57,19 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-&:hover{
-    color: hsl(0, 0%, 8%);
-}
+                transition: content;
+
+                &:hover {
+                    color: hsl(0, 0%, 8%);
+
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        &::after {
+                            content: url(./images/icon-arrow-up.svg);
+                        }
+                    }
+                }
+
                 &:nth-child(1),
                 &:nth-child(2) {
                     &::after {
@@ -80,7 +90,8 @@ header {
                 text-align: center;
                 padding: 8px 13px;
                 cursor: pointer;
-                &:hover{
+
+                &:hover {
                     color: hsl(0, 0%, 8%);
                     border: 1px solid hsl(0, 0%, 8%);
                 }
@@ -156,6 +167,19 @@ main {
             }
         }
     }
+}
+
+.sub {
+    position: absolute;
+    margin-bottom: -70px;
+    margin-left: -50px;
+    bottom: 0;
+    height: fit-content;
+    width: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 10px hsla(229, 31%, 79%, 0.664);
 }
 
 .attribution {

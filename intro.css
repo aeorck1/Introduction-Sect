@@ -49,9 +49,13 @@ header .main_char .second > div {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: content;
 }
 header .main_char .second > div:hover {
   color: hsl(0deg, 0%, 8%);
+}
+header .main_char .second > div:hover:nth-child(1)::after, header .main_char .second > div:hover:nth-child(2)::after {
+  content: url(./images/icon-arrow-up.svg);
 }
 header .main_char .second > div:nth-child(1)::after, header .main_char .second > div:nth-child(2)::after {
   margin-left: 5px;
@@ -133,6 +137,21 @@ main .left .customers {
 }
 main .left .customers img {
   width: auto;
+}
+
+.sub {
+  position: absolute;
+  margin-bottom: -70px;
+  margin-left: -50px;
+  bottom: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 200px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 1px 1px 10px hsla(229deg, 31%, 79%, 0.664);
 }
 
 .attribution {
