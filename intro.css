@@ -65,6 +65,9 @@ header .main_char .right .bord {
 }
 
 main {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 80%;
   margin: 50px auto;
   display: flex;
@@ -75,8 +78,10 @@ main .right img {
   width: 400px;
 }
 main .left {
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 50%;
 }
 main .left .remote {
