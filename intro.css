@@ -113,6 +113,10 @@ main .left .customers {
   justify-content: space-between;
   align-items: center;
 }
+main .left .customers img {
+  width: auto;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
