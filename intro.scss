@@ -44,6 +44,7 @@ header {
         width: 88%;
         display: flex;
         justify-content: space-between;
+        font-weight: 500;
 
         .second {
             display: flex;
@@ -53,11 +54,17 @@ header {
             >div {
                 padding: 5px 10px;
                 cursor: pointer;
-
+                display: flex;
+                align-items: center;
+                justify-content: center;
+&:hover{
+    color: hsl(0, 0%, 8%);
+}
                 &:nth-child(1),
                 &:nth-child(2) {
                     &::after {
                         margin-left: 5px;
+                        margin-top: -5px;
                         content: url(./images/icon-arrow-down.svg);
                     }
                 }
@@ -72,6 +79,11 @@ header {
             >div {
                 text-align: center;
                 padding: 8px 13px;
+                cursor: pointer;
+                &:hover{
+                    color: hsl(0, 0%, 8%);
+                    border: 1px solid hsl(0, 0%, 8%);
+                }
 
             }
 
@@ -98,7 +110,7 @@ main {
     }
 
     .left {
-align-self: flex-end;
+        align-self: flex-end;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

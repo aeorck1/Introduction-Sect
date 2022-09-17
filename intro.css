@@ -36,6 +36,7 @@ header .main_char {
   width: 88%;
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
 }
 header .main_char .second {
   display: flex;
@@ -45,9 +46,16 @@ header .main_char .second {
 header .main_char .second > div {
   padding: 5px 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .main_char .second > div:hover {
+  color: hsl(0deg, 0%, 8%);
 }
 header .main_char .second > div:nth-child(1)::after, header .main_char .second > div:nth-child(2)::after {
   margin-left: 5px;
+  margin-top: -5px;
   content: url(./images/icon-arrow-down.svg);
 }
 header .main_char .right {
@@ -58,6 +66,11 @@ header .main_char .right {
 header .main_char .right > div {
   text-align: center;
   padding: 8px 13px;
+  cursor: pointer;
+}
+header .main_char .right > div:hover {
+  color: hsl(0deg, 0%, 8%);
+  border: 1px solid hsl(0deg, 0%, 8%);
 }
 header .main_char .right .bord {
   border: 1px solid hsl(0deg, 0%, 41%);
