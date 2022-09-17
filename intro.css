@@ -49,18 +49,17 @@ header .main_char .second > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: content;
+}
+header .main_char .second > div:nth-child(1)::after, header .main_char .second > div:nth-child(2)::after {
+  margin-left: 5px;
+  margin-top: -5px;
+  content: url(./images/icon-arrow-down.svg);
 }
 header .main_char .second > div:hover {
   color: hsl(0deg, 0%, 8%);
 }
 header .main_char .second > div:hover:nth-child(1)::after, header .main_char .second > div:hover:nth-child(2)::after {
   content: url(./images/icon-arrow-up.svg);
-}
-header .main_char .second > div:nth-child(1)::after, header .main_char .second > div:nth-child(2)::after {
-  margin-left: 5px;
-  margin-top: -5px;
-  content: url(./images/icon-arrow-down.svg);
 }
 header .main_char .right {
   width: 200px;
@@ -139,7 +138,7 @@ main .left .customers img {
   width: auto;
 }
 
-.sub {
+.sub, header .main_char .second > div:hover:nth-child(1) .sub_menu, header .main_char .second > div:hover:nth-child(2) .sub_menu {
   position: absolute;
   margin-bottom: -70px;
   margin-left: -50px;
@@ -151,6 +150,7 @@ main .left .customers img {
   padding: 20px;
   border-radius: 5px;
   background-color: white;
+  display: block;
   box-shadow: 1px 1px 10px hsla(229deg, 31%, 79%, 0.664);
 }
 

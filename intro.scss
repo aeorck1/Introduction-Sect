@@ -57,7 +57,18 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                transition: content;
+                
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    
+                    &::after {
+                        margin-left: 5px;
+                        margin-top: -5px;
+                        content: url(./images/icon-arrow-down.svg);
+
+                    }
+                }
 
                 &:hover {
                     color: hsl(0, 0%, 8%);
@@ -67,17 +78,15 @@ header {
                         &::after {
                             content: url(./images/icon-arrow-up.svg);
                         }
+                        .sub_menu {
+                            @extend .sub;
+                            
+                        }
                     }
                 }
 
-                &:nth-child(1),
-                &:nth-child(2) {
-                    &::after {
-                        margin-left: 5px;
-                        margin-top: -5px;
-                        content: url(./images/icon-arrow-down.svg);
-                    }
-                }
+
+               
             }
         }
 
@@ -179,7 +188,9 @@ main {
     padding: 20px;
     border-radius: 5px;
     background-color: white;
+    display: block;
     box-shadow: 1px 1px 10px hsla(229, 31%, 79%, 0.664);
+    
 }
 
 .attribution {
