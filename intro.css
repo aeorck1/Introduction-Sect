@@ -75,7 +75,7 @@ header .main_char .right > div {
   padding: 8px 13px;
   cursor: pointer;
 }
-header .main_char .right > div:hover {
+header .main_char .right > div:hover(:not(:first-child)) {
   color: hsl(0deg, 0%, 8%);
   border: 1px solid hsl(0deg, 0%, 8%);
 }
