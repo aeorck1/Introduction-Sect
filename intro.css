@@ -83,6 +83,18 @@ header .main_char .right .bord {
   border: 1px solid hsl(0deg, 0%, 41%);
   border-radius: 10px;
 }
+header .hamburger-container {
+  position: absolute;
+  top: 5;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+header .hamburger-container .hamburger {
+  width: 30px;
+}
 
 main {
   height: -webkit-fit-content;
@@ -94,8 +106,11 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-main .right img {
+main .right-desktop img {
   width: 400px;
+}
+main .right-mobile {
+  display: none;
 }
 main .left {
   align-self: flex-end;
@@ -179,4 +194,57 @@ main .left .customers img {
 
 .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+
+@media (max-width: 400px) {
+  header .main_char {
+    display: none;
+  }
+  header .hamburger-container {
+    display: flex;
+    margin-right: 15px;
+  }
+  header .hamburger-container .close {
+    display: none;
+  }
+  main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: 100%;
+  }
+  main .right-desktop {
+    display: none;
+  }
+  main .right-mobile {
+    display: block;
+    margin-bottom: 30px;
+  }
+  main .right-mobile img {
+    width: 99%;
+  }
+  main .left {
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    text-align: center;
+    margin: auto;
+  }
+  main .left .remote {
+    text-align: center;
+    font-size: 25px;
+    width: 300px;
+    margin: 10px auto;
+  }
+  main .left p {
+    width: 93%;
+    line-height: 1.5;
+    font-size: 16px;
+    margin: auto;
+  }
+  main .left .customers {
+    width: 90%;
+  }
+  main .left .customers img {
+    width: 70px;
+  }
 }/*# sourceMappingURL=intro.css.map */

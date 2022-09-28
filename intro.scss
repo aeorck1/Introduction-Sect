@@ -76,10 +76,10 @@ header {
 
                     &:nth-child(1),
                     &:nth-child(2) {
-                        
+
                         .sub_menu {
                             display: flex;
-                            
+
                         }
 
                         &::after {
@@ -118,6 +118,20 @@ header {
             }
         }
     }
+
+    .hamburger-container {
+        position: absolute;
+        top: 5;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+
+        .hamburger {
+            width: 30px;
+        }
+    }
 }
 
 main {
@@ -128,10 +142,14 @@ main {
     justify-content: space-between;
     align-items: center;
 
-    .right {
+    .right-desktop {
         img {
             width: 400px;
         }
+    }
+
+    .right-mobile {
+        display: none;
     }
 
     .left {
@@ -223,4 +241,74 @@ main {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width:400px) {
+    header {
+        .main_char {
+            display: none;
+        }
+
+        .hamburger-container{
+            display: flex;
+            margin-right: 15px;
+            .close{
+                display: none;
+            }
+        }
+    }
+
+    main {
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+
+        .right-desktop {
+            display: none;
+        }
+
+        .right-mobile {
+            display: block;
+
+            img {
+                width: 99%
+            }
+
+            margin-bottom: 30px;
+        }
+
+        //check
+        .left {
+            align-items: center;
+            justify-content: center;
+            width: 99%;
+            text-align: center;
+            margin: auto;
+
+            .remote {
+                text-align: center;
+                font-size: 25px;
+                width: 300px;
+                margin: 10px auto;
+            }
+
+            p {
+                width: 93%;
+                line-height: 1.5;
+                font-size: 16px;
+                margin: auto;
+            }
+
+            .customers {
+                width: 90%;
+
+                img {
+                    width: 70px;
+                }
+            }
+        }
+    }
+
+   
 }
