@@ -253,6 +253,9 @@ main {
         .hamburger-container{
             display: flex;
             margin-right: 15px;
+            #open{
+                display: block;
+            }
             .close{
                 display: none;
             }
@@ -310,5 +313,5 @@ main {
         }
     }
 
-   
+    
 }

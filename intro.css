@@ -204,6 +204,9 @@ main .left .customers img {
     display: flex;
     margin-right: 15px;
   }
+  header .hamburger-container #open {
+    display: block;
+  }
   header .hamburger-container .close {
     display: none;
   }
