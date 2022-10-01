@@ -248,16 +248,31 @@ main {
     header {
         .main_char {
             display: none;
+            transition: display 5s;
         }
 
-        .hamburger-container{
+        .hamburger-container {
             display: flex;
+            height: 35px;
+            width: 35px;
             margin-right: 15px;
-            #open{
+            align-items: center;
+            justify-content: center;
+
+            #open {
                 display: block;
+                img {
+                    width: 35px;
+                    height: 30px;
+                }
             }
-            .close{
+
+            #close {
                 display: none;
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
             }
         }
     }
@@ -313,5 +328,5 @@ main {
         }
     }
 
-    
+
 }

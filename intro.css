@@ -199,16 +199,29 @@ main .left .customers img {
 @media (max-width: 400px) {
   header .main_char {
     display: none;
+    transition: display 5s;
   }
   header .hamburger-container {
     display: flex;
+    height: 35px;
+    width: 35px;
     margin-right: 15px;
+    align-items: center;
+    justify-content: center;
   }
   header .hamburger-container #open {
     display: block;
   }
-  header .hamburger-container .close {
+  header .hamburger-container #open img {
+    width: 35px;
+    height: 30px;
+  }
+  header .hamburger-container #close {
     display: none;
+  }
+  header .hamburger-container #close img {
+    width: 35px;
+    height: 35px;
   }
   main {
     flex-direction: column-reverse;

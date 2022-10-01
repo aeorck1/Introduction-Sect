@@ -14,7 +14,33 @@
 </head>
 
 <body>
+<script>
 
+  const opened=document.getElementById('open');
+  const clos=document.getElementById('close');
+
+  function clicker() {
+    if (opened.style.display==="block"){
+      opened.style.display=none
+      clos.style.display=block
+    }
+
+    else{
+      opened.style.display="block"
+      clos.style.display="none"
+    }
+    console.log(console.error(clicker))
+  }
+  // function clicker(){
+  //   document.getElementById('open').style.display="none";
+  //   document.getElementById('close').style.display="block";
+  // }
+
+  // function clickerr(){
+  //   document.getElementById('close').style.display="none";
+  //   document.getElementById('open').style.display="block";
+  // }
+</script>
   <header>
     <img src="./images/logo.svg" alt="Snap Logo">
     <div class="main_char">
@@ -34,6 +60,7 @@
               <p>Planning</p>
             </div>
           </div>
+          
         </div>
         <div class="cases">Company
 
@@ -51,6 +78,19 @@
       <div class="right light">
         <div>Login</div>
         <div class="bord">Register</div>
+      </div>
+    </div>
+
+    <div class="hamburger-container">
+      <div id="open" onclick="clicker()">
+        <img src="./images/icon-menu.svg" alt="Menu">
+      </div>
+      <div id="close">
+        <img src="./images/icon-close-menu.svg" alt="Close Menu">
+      </div>
+
+      <div class="menu-burger">
+        
       </div>
     </div>
   </header>
